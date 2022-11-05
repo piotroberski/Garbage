@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import cabbage from '../../icons/cabbage.png';
+import cabbage from 'icons/cabbage.png';
 
 const StyledBar = styled.div`
   display: flex;
