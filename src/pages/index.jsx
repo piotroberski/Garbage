@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Container from 'helpers/Container';
 import StyledH1 from 'helpers/Headings';
 import RouteRecord from 'components/RouteRecord';
-import { SpacerBeta } from 'helpers/Spacings';
+import { SpacerAlpha, SpacerBeta } from 'helpers/Spacings';
 
 const ScrolledList = styled.div`
   overflow-x: auto;
@@ -17,6 +17,7 @@ const Home = () => {
   return (
     <Container layout="wide">
       <StyledH1>PREVIOUS ROUTES</StyledH1>
+      <SpacerAlpha />
       <ScrolledList>
         {/* {records.map(({truckID, capacity}) => <RouteRecord truckID={truckID} capacity={capacity} />)} */}
         {[...Array(6)].map((x, i) => (
@@ -31,6 +32,7 @@ const Home = () => {
       </ScrolledList>
       <SpacerBeta />
       <StyledH1>NEXT ROUTE</StyledH1>
+      <SpacerAlpha />
       <ScrolledList>
         {[...Array(2)].map((x, i) => (
           <RouteRecord
