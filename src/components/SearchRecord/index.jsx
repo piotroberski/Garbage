@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const StyledBar = styled.div`
+const StyledBarLink = styled(Link)`
   min-width: 100%;
   padding: 15px 30px;
   background: #1f363d;
@@ -11,13 +12,14 @@ const StyledBar = styled.div`
   text-align: center;
   color: #ffffff;
   font-weight: 700;
+  text-decoration: none;
 `;
 
 const SearchRecord = ({ name, truckID }) => {
   return (
-    <StyledBar>
+    <StyledBarLink to={truckID}>
       {name} | #{truckID}
-    </StyledBar>
+    </StyledBarLink>
   );
 };
 

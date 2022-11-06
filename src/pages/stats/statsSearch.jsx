@@ -4,6 +4,7 @@ import Container from 'helpers/Container';
 import { SpacerBeta } from 'helpers/Spacings';
 import Search from 'components/Search';
 import SearchRecord from 'components/SearchRecord';
+import { Outlet } from 'react-router-dom';
 
 const ScrolledList = styled.div`
   overflow-x: auto;
@@ -13,7 +14,7 @@ const ScrolledList = styled.div`
   align-items: flex-start;
 `;
 
-const Stats = () => {
+const StatsSearch = () => {
   return (
     <Container>
       <Search />
@@ -28,8 +29,9 @@ const Stats = () => {
         <SearchRecord name="Ślężna 1" truckID="4125" />
         <SearchRecord name="Grabiszynska 14" truckID="5151" />
       </ScrolledList>
+      <Outlet />
     </Container>
   );
 };
 
-export default Stats;
+export default StatsSearch;

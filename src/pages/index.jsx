@@ -19,82 +19,28 @@ const Home = () => {
       <StyledH1>PREVIOUS ROUTES</StyledH1>
       <ScrolledList>
         {/* {records.map(({truckID, capacity}) => <RouteRecord truckID={truckID} capacity={capacity} />)} */}
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
+        {[...Array(6)].map((x, i) => (
+          <RouteRecord
+            key={i}
+            truckID="123"
+            capacity="15000"
+            departure="13:15"
+            arrival="13:30"
+          />
+        ))}
       </ScrolledList>
       <SpacerBeta />
       <StyledH1>NEXT ROUTE</StyledH1>
       <ScrolledList>
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
-        <RouteRecord
-          truckID="123"
-          capacity="15000"
-          departure="13:15"
-          arrival="13:30"
-        />
+        {[...Array(2)].map((x, i) => (
+          <RouteRecord
+            key={i}
+            truckID="123"
+            capacity="15000"
+            departure="13:15"
+            arrival="13:30"
+          />
+        ))}
       </ScrolledList>
     </Container>
   );
